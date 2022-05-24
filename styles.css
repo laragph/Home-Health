@@ -1,0 +1,255 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+/** SET BORDER BOX EVERYWHERE */
+* {
+    box-sizing: border-box;
+}
+/** APPLY BASE TAG STYLES */
+body,
+html {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: 'georgia', serif;
+}
+/** RESPONSIVE IMAGES */
+figure,
+img {
+    /* Sets image width to match parent */
+    width  : 100%;
+    display: block;
+    margin : 0 auto;
+}
+
+p {
+    line-height: 1.2em;
+}
+/** Caption styles */
+.caption,
+figcaption {
+    font-size: 0.9rem;
+    color    : #8e8a8a;
+    padding  : 5px 0;
+}
+/** BASE CLASSES */
+/** Container styles to keep content from becoming too wide or coming too close to
+* mobile edge */
+.container {
+    width    : 100%;
+    max-width: 800px;
+    padding  : 10px;
+    margin   : 0 auto;
+}
+
+
+/** Images are allowed to be a little wider when broken out into their own container */
+.container.image {
+    padding: 0;
+}
+
+.container.image .caption,
+.container.image figcaption {
+    padding: 5px 10px;
+}
+
+.calc-container {
+    background-color:rgba(57, 142, 221, 0.65);
+    padding: 18px 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.qty_container .unit {
+padding: 6px;
+font-family: Arial, Helvetica, sans-serif
+}
+.calculator .row .item img {
+    margin: 4px auto;
+    max-width: 200px;
+}
+
+.qty_container {
+    display: flex;
+}
+
+.qty_container > div {
+    flex-basis: 90%;
+}
+
+.qty_container input {
+    display: block;
+    width: 100%;
+    margin: 0%;
+    padding: 10px;
+    border: 0;
+}
+
+.qty-container .unit {
+    background-color:rgba(51, 15, 214, 0.65);
+    padding: 6px 0;
+    text-align: center;
+    justify-content: space-between;
+    flex-basis:100%;
+}
+
+.calculator .row {
+    margin-bottom: 15px;
+    flex-basis: 30%;
+}
+
+.hour,
+.dollar {
+    margin: 5px 0;
+    display: none;
+}
+
+.dollar.active,
+.hour.active {
+    display: block;
+}
+
+.annotate {
+    position: relative;
+}
+
+.annotate .dot {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    color: #FFF;
+}
+
+.annotate .dot .inner {
+    position: absolute;
+    opacity: 0;
+    color: #FFF;
+    padding: 25px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.annotate .dot .close {
+    color: #FFF;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    text-decoration: none;
+    opacity: 0;
+}
+
+.annotate .dot.green {
+    background-color: rgba(0, 110,65, 0.65);
+}
+
+.annotate .dot.red {
+    background-color:rgba(214, 42, 19, 0.65);
+}
+
+.annotate .dot.blue {
+    background-color:rgba(51, 15, 214, 0.65);
+}
+
+.annotate .dot.pink {
+    background-color:rgba(231, 56, 179, 0.65);
+}
+
+#ny:not(.active) {
+    top: 30%;
+    left: 82%;
+}
+
+#philly:not(.active) {
+    top: 35%;
+    left: 80%;
+}
+
+#sf:not(.active) {
+    top: 41%;
+    left: 1%;
+}
+
+#la:not(.active) {
+    top: 58%;
+    left: 5%;
+}
+
+.annotate .dot.active {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    border: 0;
+    z-index: 2;
+}
+
+.annotate .dot.active .inner,
+.annotate .dot.active .close {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+}
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 769px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+
+    .calculator {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+/*********************************************************************
+  YOUR MEDIUM-DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 805px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container {
+        padding: 0;
+    }
+}
+/*********************************************************************
+  YOUR LARGE DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 1205px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container.image .caption,
+    .container.image figcaption {
+        padding: 5px 0;
+    }
+}

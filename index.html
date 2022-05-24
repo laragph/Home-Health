@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- set the character set -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- first step to a responsive site -->
+    <title>HTML Skeleton</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="styles.css"
+
+    <!-- Your styles should be called here -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      	<![endif]-->
+</head>
+
+<body>
+    <!-- YOUR CONTENT GOES HERE -->
+<div class='container'>
+    <h1>Home health aides pushed for a big raise in New York State. Here's why they need it.</h1>
+    <p class ='byline'>by Lara Heard</p>
+    <p>
+        In Spring 2022, a group of home health care workers pushed Albany to adopt a measure in the state budget that would increase the profession's minimum wage by 50%. The movement, which drew its demands from the proposed Fair Pay for Home Care Act, had mixed success. In April, the 2023 budget gave home health aides a raise of three dollars an hour, to be added gradually over the coming two years.  
+    </p>
+    <p>
+        In an <a href="https://www.governor.ny.gov/news/governor-hochul-announces-historic-20-billion-multi-year-healthcare-investment-fy-2023-budget">announcement</a> from the governer's office, Kathy Hochul called the total $20 billion that the budget allocated to healthcare "historic investments that will rebuild the health care economy." She also gave a nod to health care employees, who she said were "asked to do the impossible" throughout COVID-19. 
+    </p>
+    <p>But in a profession that's historically been underpaid, a three dollar raise won't keep home health aide workers from struggling to make ends meet.</p>
+</div>
+<div class ='calc-container'>
+    <div class='container'>
+        <h2>In 2021, home health aides in the New York metropolitan area made an average of $16.11 an hour. Here's how that stacks up to living expenses.
+        </h2>
+        <div class="calculator">
+            <div class="row">
+                <div class='item'>
+                    <h3>Rent</h3>
+                    <img src="home.png"/>
+                    <div class="qty_container">
+                        <div>
+                            <input type="number" name='qty' value="0" />
+                        </div>
+                        <div class="unit">
+                            Months                        </div>
+                    </div>
+                </div>
+                <div class="dollar" data-price="2275"><br>Total rent: $<span></span><br><br> (Based on the median price of a studio apartment, December 2021, Realtor.com)<br><br></div>
+                <div class="hour" data-price="141.21663563">Hours worked to afford: <span></span></div>
+            </div>
+            <div class="row">
+                <div class='item'>
+                    <h3>Groceries</h3>
+                    <img src="food.png"/>
+                    <div class="qty_container">
+                        <div>
+                            <input type="number" name='qty' value="0" />
+                        </div>
+                        <div class="unit">
+                          Days
+                        </div>
+                    </div>
+                </div>
+                <div class="dollar" data-price="16.4027397"><br>Total grocery price: $<span></span> <br><br>(Based on the amount the average household spent eating in, 2019-20, U.S. Bureau of Labor Statistics)</div>
+                <div class="hour" data-price="1.01817130354"><br>Hours worked to afford: <span></span></div>
+            </div>
+        
+            <div class="row">
+                <div class='item'>
+                    <h3>Transportation</h3>
+                    <img src="metro.png"/>
+                    <div class="qty_container">
+                        <div>
+                            <input type="number" name='qty' value="0" />
+                        </div>
+                        <div class="unit">
+                            Months
+                        </div>
+                    </div>
+                </div>
+                <div class="dollar" data-price="127"><br>Total metrocard price: $<span></span></div>
+                <div class="hour" data-price="7.8833023"><br>Hours worked to afford: <span></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class ='calc-container'>
+    <div class='container'>
+        <h2>In 2022, the minimum wage in New York City for home health aides was raised to $18 an hour, although the full raise won't take effect until October 2023. Here's what that money can do for workers.
+        </h2>
+        <div class="calculator">
+            <div class="row">
+                <div class='item'>
+                    <h3>Rent</h3>
+                    <img src="home.png"/>
+                    <div class="qty_container">
+                        <div>
+                            <input type="number" name='qty' value="0" />
+                        </div>
+                        <div class="unit">
+                            Months in a studio apartment                        </div>
+                    </div>
+                </div>
+                <div class="dollar" data-price="2275"><br>Total rent: $<span></span></div>
+                <div class="hour" data-price="126.388888889"><br>Hours worked to afford: <span></span></div>
+            </div>
+            <div class="row">
+                <div class='item'>
+                    <h3>Groceries</h3>
+                    <img src="food.png"/>
+                    <div class="qty_container">
+                        <div>
+                            <input type="number" name='qty' value="0" />
+                        </div>
+                        <div class="unit">
+                          Days purchasing groceries
+                        </div>
+                    </div>
+                </div>
+                <div class="dollar" data-price="16.4027397"><br>Total grocery price: $<span></span></div>
+                <div class="hour" data-price="0.91126331666"><br>Hours worked to afford: <span></span></div>
+            </div>
+        
+            <div class="row">
+                <div class='item'>
+                    <h3>Transportation</h3>
+                    <img src="metro.png"/>
+                    <div class="qty_container">
+                        <div>
+                            <input type="number" name='qty' value="0" />
+                        </div>
+                        <div class="unit">
+                            Months purchasing metrocards
+                        </div>
+                    </div>
+                </div>
+                <div class="dollar" data-price="127"><br>Total metrocard price: $<span></span></div>
+                <div class="hour" data-price="7.05555555556"><br>Hours worked to afford: <span></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container image">
+    <p>
+        Around the country, wages have been low, despite a nationwide shortage of home health care workers. In February 2022, the pandemic <a href="https://www.cnn.com/2022/02/03/health/home-health-care-aide-shortage-khn-partner-wellness/index.html"> exacerbated</a> this shortage as home care workers left the job for positions in the industry that compensated them more generously. The job became more demanding, and necessitated that home care workers expose themselves to potential infection. </p>
+        <p> PHI National reports that home care workers will be in higher demand in the coming years, when the number of people over 65 in the U.S. will increase. The organization says that the profession's membership grew by about 50% between 2010 and 2020. 
+    </p>
+        <p>
+           Despite rising demand, the profession has not adequately paid its employees. In 2019, PHI National <a href="https://www.phinational.org/news/new-research-shows-home-care-workers-earn-11-hour-high-poverty/">reported</a> that about 17% had income that placed them below the poverty line. Below, explore the average wages for home health and care aides in the metropolitan areas where they are most prevalent. Data is from the Bureau of Labor Statistics for May 2021. 
+    </p>
+    <div class="annotate">
+        <img src="map.png"/>
+        <div id="philly" class="dot pink">
+            <a class="close fa fa-times" href="#"></a>
+            <div class="inner">
+                <h3>Philadelphia metro area</h3>
+                <p>The average wage in the Philadelphia metro area, encompassing parts of Pennsylvania, New Jersey, Delaware, and Maryland, was just $13.90 an hour in May 2021.</p>
+            </div>
+                </div>
+        <div id="la" class="dot green">
+                    <a class="close fa fa-times" href="#"></a>
+                    <div class="inner">
+                        <h3>Los Angeles metro area</h3>
+                        <p>The average wage in the Los Angeles metro area, which includes Long Beach and Anaheim, was $15.02.</p>
+                    </div>
+            </div>
+            <div id="ny" class="dot blue">
+                <a class="close fa fa-times" href="#"></a>
+                <div class="inner">
+                    <h3>New York metro area</h3>
+                    <p>The New York metropolitan area had the highest number of home health care workers. The average wage in the area, which spans parts of New York, New Jersey, and Pennsylvania, was $16.11 per hour.</p>
+                </div>
+                    </div>
+
+             <div id="sf" class="dot red">
+                        <a class="close fa fa-times" href="#"></a>
+                        <div class="inner">
+                            <h3>San Francisco metro area</h3>
+                            <p>The average wage in the San Francisco metro area, encompassing Oakland and Hayward, was $16.97. The area had the highest wages of the ten metro areas with the highest employment in the profession.</p>
+                        </div>
+                     </div>
+    </div>
+    <br>
+    <br>
+    <li>Map by User:Wapcaplet, edited by User:Ed g2s, User:Dbenbenn, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons</li>
+    <li>Food by Rolas Design from NounProject.com</li>
+    <li>Metro by Rolas Design from NounProject.com</li>
+    <li>Home by Rolas Design from NounProject.com</li>
+    <br>
+    <br>
+        </div>
+
+<script src="main.js"></script>
+</body>
+
+</html>
